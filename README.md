@@ -74,7 +74,7 @@ In your Livebook,
 
 ```elixir
 Mix.install([
-  {:kino_livereload, "~> 0.0.1"}
+  {:kino_livereload, "~> 0.1.0"}
 ])
 ```
 
