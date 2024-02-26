@@ -22,6 +22,10 @@ use KinoLiveReload, watch: MyLocalModule
 MyLocalModule.hello()
 
 # => "world"
+
+# Edit to /path/to/my-local-module.ex
+
+# => "thomas!"
 ```
 
 Any time you make changes to the source code of MyLocalModule the cell with the aforementioned code will automatically recompile, and rerun.
