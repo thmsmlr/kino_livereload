@@ -8,7 +8,7 @@
 
 <!-- Docs -->
 
-kino_livereload brings the developer experience of a pheonix application to Livebook.
+kino_livereload brings the developer experience of a Phoenix application to Livebook.
 
 Simply mark which cell you want to livereload with `use KinoLiveReload, watch: MyModule` to 
 rerun the cell anytime the source code for MyModule changes. You can provide a single module or a 
