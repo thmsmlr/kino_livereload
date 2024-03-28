@@ -8,7 +8,7 @@
 
 <!-- Docs -->
 
-kino_livereload brings the developer experience of a pheonix application to Livebook.
+kino_livereload brings the developer experience of a Phoenix application to Livebook.
 
 Simply mark which cell you want to livereload with `use KinoLiveReload, watch: MyModule` to 
 rerun the cell anytime the source code for MyModule changes. You can provide a single module or a 
@@ -36,7 +36,7 @@ Any time you make changes to the source code of MyLocalModule the cell with the 
 
 Livebook is a godsend for productivity.
 When you are working on code that requires a long boot up time, whether it be waiting for resources, or doing some long computation, Livebook lets you implicitly cache previous results.
-It's like a repl, but more premenant as you can rerun cells, save notbooks and rerun them later.
+It's like a repl, but more permanent as you can rerun cells, save notbooks and rerun them later.
 However, ultimately we know that our code ultimately ends in a Mix projects.
 That's where a gap still existis. 
 While Livebook is better than IEX, there is still a jump between Livebook and a Mix project. 
@@ -46,15 +46,15 @@ Let me explain.
 Frequently you'll start writing an adhoc script in Livebook because you get a REPL like experience with visual, rerunnable feedback.
 However, at some point your Livebooks in a project become too large and you want to refactor helper functions into a library.
 This is where the first problem begins.
-Since instally dependencies happesn in the first cell as part of the `Mix.install(...)` if you need to fix and edge case in a refactored helper function, you have to rerun the entire notebook, nullifying the benefist of the REPL.
+Since installing dependencies happens in the first cell as part of the `Mix.install(...)` if you need to fix and edge case in a refactored helper function, you have to rerun the entire notebook, nullifying the benefits of the REPL.
 At which point you are no better off than moving the Livebook into a test and running `mix test`.
 
-Now that's just in the refactoring usecases, imagine you wanted to co-develop a library with a livebook. 
-At least when you're fixing edge cases in a refactor, maybe the hit to developer productivity is tolerably to continue using Livebook (but then again why?).
+Now that's just in the refactoring usecases. Imagine you wanted to co-develop a library with a livebook. 
+At least when you're fixing edge cases in a refactor, maybe the hit to developer productivity is tolerable to continue using Livebook (but then again why?).
 Whereas in a co-develop situation as you'd constantly be rerunning the entire Livebook.
 
 That's where `:kino_livereload` comes in. 
-This library brings Pheonix LiveReload functionality to Livebook.
+This library brings Phoenix LiveReload functionality to Livebook.
 When you have a local library that you're actively working on, upon which a specific Livebook cell depends, you can mark the cell and just rerun that cell anytime the underlying source code changes.
 
 This is particularly useful if you have a usecase where you are actively iterating on helper functions that operate on some expensive data to initial load/compute.
