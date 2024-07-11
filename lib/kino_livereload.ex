@@ -100,7 +100,13 @@ defmodule KinoLiveReload do
 
   defmacro __using__(opts) do
     mods = Keyword.fetch!(opts, :watch)
-    "#cell:" <> cell_id = __CALLER__.file
+
+    "cell:" <> cell_id =
+      __CALLER__.file
+      |> Path.basename()
+      |> String.split("#")
+      |> List.last()
+
     mods = List.wrap(mods)
 
     quote do
